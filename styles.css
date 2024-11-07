@@ -1,0 +1,105 @@
+:root{
+    --standard: 1rem;
+    --border-color: #8c8670;
+    --bg-color: #e3d5c1;
+    --orange-color: #dd5e03;
+    --red-color: rgb(199, 0, 0);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+}
+body{
+    background-color: var(--bg-color);
+}
+button{
+    display: block;
+    cursor: pointer;
+    background-color: inherit;
+}
+.container{
+    max-width: 1240px;
+    padding: 0 var(--standard);
+    margin: 0 auto;
+}
+.input__form{
+    display: flex;
+    align-items: center;
+    gap: var(--standard);
+    padding: var(--standard) 0;
+    min-width: 295px;
+    flex-wrap: wrap;
+}
+.input_form p{
+    flex: 1;
+}
+.form__input{
+    border: none;
+    flex: 1;
+    padding: var(--standard);
+    outline: none;
+}
+.form__add__button{
+    border: none;
+    padding: var(--standard);
+    background-color: var(--orange-color);
+    color: #fff;
+    outline: none;
+}
+.todos__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    gap: var(--standard);
+    grid-auto-rows: 1fr;
+}
+.todo__item{
+    color: var(--orange-color);
+    text-align:start;
+    border: 1px solid var(--orange-color);
+    padding: var(--standard) var(--standard) 70px var(--standard);
+    word-break: break-all;
+    position: relative;
+    background: whitesmoke;
+    box-shadow: 1px 1px 2px #00000098;
+    position: relative;
+}
+.check{
+    border: 2px solid var(--orange-color);
+    padding: var(--standard);
+    color: var(--orange-color);
+    outline: none;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.todo__checked{
+    border: 1px solid green;
+    color: green;
+}
+.button__checked{
+    border: 2px solid green;
+    color: green;
+}
+.edit{
+    border: none;
+    background-color: transparent;
+    color: #000;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(1rem + 5px);
+    text-decoration: underline;
+}
+.delete{
+    border: 2px solid var(--red-color);
+    padding: var(--standard);
+    color: var(--red-color);
+    outline: none;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+}
